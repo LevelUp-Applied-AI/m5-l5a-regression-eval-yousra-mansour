@@ -148,7 +148,7 @@ def run_cross_validation(pipeline, X_train, y_train, cv=5):
     """
     # TODO: Run cross_val_score with StratifiedKFold
     skf = StratifiedKFold(n_splits=cv, shuffle=True, random_state=42)
-    return cross_val_score(pipeline, X_train, y_train, cv=skf, scoring="f1")
+    return cross_val_score(pipeline, X_train, y_train, cv=skf, scoring="accuracy")
 
 
 if __name__ == "__main__":
